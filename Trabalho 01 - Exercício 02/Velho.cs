@@ -17,7 +17,7 @@ namespace Trabalho_01___Exercício_02
         }
         public void CalcularDesconto()
         {
-            this.Preço -= this.Preço * (this.Desconto / 100);
+            base.Preço -= this.Preço * (this.Desconto / 100);
         }
     }
 }

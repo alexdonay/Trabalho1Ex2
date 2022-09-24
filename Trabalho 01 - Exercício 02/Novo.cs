@@ -11,7 +11,7 @@
         }
         public void CalcularAdicional()
         {
-            this.Preço += this.Preço * (this.Adicional / 100); ;
+            base.Preço += this.Preço * (this.Adicional / 100); ;
         }
     }
 }

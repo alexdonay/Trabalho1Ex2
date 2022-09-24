@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Trabalho_01___Exercício_02
@@ -26,33 +19,46 @@ namespace Trabalho_01___Exercício_02
         {
             if (Botao1.Checked)
             {
-                imovelVelho = null;
-                string endereçoImovel = textBox1.Text;
-                double preçoImovel = Convert.ToDouble(textBox2.Text);
-                double adicionalPreço = Convert.ToDouble(textBox3.Text);
-                imovelNovo = new Novo(endereçoImovel, preçoImovel, adicionalPreço);
-                MessageBox.Show("Imóvel criado");
+                try
+                {
+                    imovelNovo = new Novo(textBox1.Text, Convert.ToDouble(textBox2.Text), Convert.ToDouble(textBox3.Text));
+                    MessageBox.Show("Imóvel criado");
+
+                }
+                catch
+                {
+                    MessageBox.Show("Dados Inválidos");
+                }
             }
             else
             {
-                imovelNovo = null;
-                string endereçoImovel = textBox1.Text;
-                double preçoImovel = Convert.ToDouble(textBox2.Text);
-                double descontoPreço = Convert.ToDouble(textBox3.Text);
-                imovelVelho = new Velho(endereçoImovel, preçoImovel, descontoPreço);
-                MessageBox.Show("Imóvel criado");
+                try
+                {
+                    imovelVelho = new Velho(textBox1.Text, Convert.ToDouble(textBox2.Text), Convert.ToDouble(textBox3.Text));
+                    MessageBox.Show("Imóvel criado");
+                }
+                catch
+                {
+                    MessageBox.Show("Dados Inválidos");
+                }
+
             }
         }
         private void btcCalcular_Click(object sender, EventArgs e)
         {
-            if (imovelNovo != null)
+            if (Botao1.Checked)
             {
                 imovelNovo.CalcularAdicional();
                 MessageBox.Show("Imóvel calculado");
                 return;
             }
-            MessageBox.Show("Imóvel calculado");
-            imovelVelho.CalcularDesconto();
+            else
+            {
+                imovelVelho.CalcularDesconto();
+                MessageBox.Show("Imóvel calculado");
+            }
+
+
         }
         private void btnMostrar_Click(object sender, EventArgs e)
         {
@@ -62,9 +68,6 @@ namespace Trabalho_01___Exercício_02
                 return;
             }
             MessageBox.Show("O valor do imóvel é: R$" + imovelVelho.MostrarPreço());
-        }
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
         }
     }
 }

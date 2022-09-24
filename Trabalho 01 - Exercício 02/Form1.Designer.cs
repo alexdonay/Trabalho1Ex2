@@ -46,22 +46,21 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(120, 79);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(206, 20);
             this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(120, 105);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.Size = new System.Drawing.Size(206, 20);
             this.textBox2.TabIndex = 1;
             // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(119, 131);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.Size = new System.Drawing.Size(207, 20);
             this.textBox3.TabIndex = 2;
             // 
             // label1
@@ -124,7 +123,7 @@
             // 
             // btnCriarImovel
             // 
-            this.btnCriarImovel.Location = new System.Drawing.Point(118, 157);
+            this.btnCriarImovel.Location = new System.Drawing.Point(15, 190);
             this.btnCriarImovel.Name = "btnCriarImovel";
             this.btnCriarImovel.Size = new System.Drawing.Size(101, 27);
             this.btnCriarImovel.TabIndex = 9;
@@ -144,7 +143,7 @@
             // 
             // btnMostrar
             // 
-            this.btnMostrar.Location = new System.Drawing.Point(118, 223);
+            this.btnMostrar.Location = new System.Drawing.Point(225, 190);
             this.btnMostrar.Name = "btnMostrar";
             this.btnMostrar.Size = new System.Drawing.Size(101, 27);
             this.btnMostrar.TabIndex = 11;
@@ -156,7 +155,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(358, 246);
             this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.btcCalcular);
             this.Controls.Add(this.btnCriarImovel);
@@ -170,7 +169,7 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Calcular Desconto/Adicional";
             this.ResumeLayout(false);
             this.PerformLayout();
 
