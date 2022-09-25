@@ -75,6 +75,7 @@
             // Botao1
             // 
             this.Botao1.AutoSize = true;
+            this.Botao1.Checked = true;
             this.Botao1.Location = new System.Drawing.Point(82, 46);
             this.Botao1.Name = "Botao1";
             this.Botao1.Size = new System.Drawing.Size(85, 17);
@@ -90,7 +91,6 @@
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(86, 17);
             this.radioButton2.TabIndex = 5;
-            this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Imóvel Velho";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 

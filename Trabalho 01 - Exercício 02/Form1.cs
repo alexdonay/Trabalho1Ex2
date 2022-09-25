@@ -22,7 +22,7 @@ namespace Trabalho_01___Exercício_02
                 try
                 {
                     imovelNovo = new Novo(textBox1.Text, Convert.ToDouble(textBox2.Text), Convert.ToDouble(textBox3.Text));
-                    MessageBox.Show("Imóvel criado");
+                    MessageBox.Show("Imóvel Novo criado");
 
                 }
                 catch
@@ -35,7 +35,7 @@ namespace Trabalho_01___Exercício_02
                 try
                 {
                     imovelVelho = new Velho(textBox1.Text, Convert.ToDouble(textBox2.Text), Convert.ToDouble(textBox3.Text));
-                    MessageBox.Show("Imóvel criado");
+                    MessageBox.Show("Imóvel Velho criado");
                 }
                 catch
                 {
@@ -49,25 +49,29 @@ namespace Trabalho_01___Exercício_02
             if (Botao1.Checked)
             {
                 imovelNovo.CalcularAdicional();
-                MessageBox.Show("Imóvel calculado");
+                MessageBox.Show("Imóvel Novo calculado");
                 return;
             }
             else
             {
                 imovelVelho.CalcularDesconto();
-                MessageBox.Show("Imóvel calculado");
+                MessageBox.Show("Imóvel Velho calculado");
             }
 
 
         }
         private void btnMostrar_Click(object sender, EventArgs e)
         {
-            if (imovelNovo != null)
+            if (Botao1.Checked)
             {
-                MessageBox.Show("O valor do imóvel é: R$" + imovelNovo.MostrarPreço());
-                return;
+                MessageBox.Show("O valor do imóvel Novo é : R$" + imovelNovo.MostrarPreço());
+ 
             }
-            MessageBox.Show("O valor do imóvel é: R$" + imovelVelho.MostrarPreço());
+            else
+            {
+                MessageBox.Show("O valor do imóvel velho é: R$" + imovelVelho.MostrarPreço());
+            }
+            
         }
     }
 }
